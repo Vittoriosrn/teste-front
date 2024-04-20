@@ -35,7 +35,3 @@ Este projeto Angular demonstra a criação de um formulário para coleta de dado
 
 * As máscaras de entrada foram configuradas para os padrões brasileiros.
 * A validação de dados é básica e pode ser expandida de acordo com suas necessidades.
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT.
