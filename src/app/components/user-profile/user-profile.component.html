@@ -1,0 +1,56 @@
+<div class="bg-modal">
+    <div class="user-info-container">
+        <section class="user-profile">
+            <h2>Usuário</h2>
+            <div class="user-content">
+                <div>
+                    <span>{{ userData.name }}</span>
+                    <span>{{ userData.birthDate | mask: '00/00/0000' }}</span>
+                </div>
+                <div>
+                    <span>{{ userData.email }}</span>
+                    <span>{{ userData.tel | mask: '(00) 00000-0000'}}</span>
+                </div>
+            </div>
+        </section>
+        <section class="user-address">
+            <h3>Informações de endereço</h3>
+            <div class="user-address-content">
+                <ul>
+                    <li>
+                        <span class="description">Logradouro</span>
+                    </li>
+                    <li>
+                        <span class="description">N° Da residência:</span>
+                    </li>
+                    <li>
+                        <span class="description">Bairro:</span>
+                    </li>
+                    <li>
+                        <span class="description">Cidade:</span>
+                    </li>
+                    <li>
+                        <span class="description">CEP:</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span>{{ userData.street }}</span>
+                    </li>
+                    <li>
+                        <span>{{ userData.number }}</span>
+                    </li>
+                    <li>
+                        <span>{{ userData.neighborhood }}</span>
+                    </li>
+                    <li>
+                        <span>{{ userData.city }}</span>
+                    </li>
+                    <li>
+                        <span>{{ userData.zip | mask: '00000-000' }}</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>

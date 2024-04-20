@@ -1,0 +1,56 @@
+<div class="modal-form">
+    <form [formGroup]="profileForm">
+        <h2>Cadastro</h2>
+        <div class="user-profile">
+            <div class="form-vertical">
+                <div>
+                    <input type="text" name="name" placeholder="Nome completo"
+                    formControlName="name"/>
+                    <div *ngIf="profileForm.controls['name'].touched || !isSubmitted">
+                        <small class="danger" *ngIf="profileForm.controls['name'].errors?.['required'] ">Campo obrigatório</small>
+                        
+                    </div>
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="E-mail"
+                    formControlName="email"/>
+                    <div *ngIf="profileForm.controls['email'].touched || !isSubmitted">
+                        <small class="danger" *ngIf="profileForm.controls['email'].errors?.['required'] ">Campo obrigatório</small>
+                        <small class="danger" *ngIf="profileForm.controls['email'].errors?.['email'] ">E-mail inválido</small>
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontally">
+                <input type="tel" name="tel" placeholder="Telefone" mask="(00) 00000-0000"
+                formControlName="tel"/>
+                <input type="text" name="birth-date" class="date-input"
+                formControlName="birthDate" mask="00/00/0000" placeholder="Nascimento"/>
+            </div>
+        </div>
+        <span>Endereço</span>
+        <div class="user-adress">
+            <div class="form-vertical">
+                <div>
+                    <input type="text" name="zip" placeholder="CEP"
+                    formControlName="zip" mask="00000-000">
+                    <div *ngIf="profileForm.controls['zip'].touched || !isSubmitted">
+                        <small class="danger" *ngIf="profileForm.controls['zip'].errors?.['required'] ">Campo obrigatório</small>
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontally">
+                <input type="text" name="street" placeholder="Logradouro" 
+                formControlName="street"/>
+                <input type="text" name="number" placeholder="N° da residencia"
+                formControlName="number" />
+            </div>
+            <div class="form-horizontally">
+                <input type="text" name="neighborhood" placeholder="Bairro"
+                formControlName="neighborhood">
+                <input type="text" name="city" placeholder="Cidade"
+                formControlName="city">
+            </div>
+        </div>
+        <button (click)="submitForm()">Concluir</button>
+    </form>
+</div>

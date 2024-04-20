@@ -1,0 +1,48 @@
+.modal-form{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    width: 420px;
+    border-radius: var(--border-radius);
+    background-color: var(--bg-color);
+    padding: 64px 24px;
+
+    h2{
+        text-align: center;
+        font-size: 2.5em;
+    }
+}
+
+.user-profile, .user-adress{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.form-vertical{
+    display: flex;
+    width: 92%;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (max-width: 394px) {
+        width: 90%;
+    }
+}
+
+.form-horizontally{
+    width: 100%;
+    display: flex;
+    gap: 8px;
+}
+
+.date-input::after{
+    color: aliceblue;
+}
