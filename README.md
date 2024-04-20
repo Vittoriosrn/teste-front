@@ -1,27 +1,41 @@
-# TesteFront
+# Repositório Angular com Formulário e LocalStorage
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+## Descrição
 
-## Development server
+Este projeto Angular demonstra a criação de um formulário para coleta de dados de usuário e endereço, utilizando máscaras de entrada e armazenamento no LocalStorage.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tecnologias Utilizadas
 
-## Code scaffolding
+* Angular
+* Angular Forms
+* ngx-mask
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Funcionalidades
 
-## Build
+* Formulário com campos para nome, email, CPF, logradouro, N° da residencia, bairro, cidade, CEP, telefone, data de nascimento.
+* Máscaras de entrada personalizadas para cada campo.
+* Validação de dados básicos.
+* Armazenamento dos dados preenchidos no LocalStorage.
+* Exibição dos dados armazenados em outra rota.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Como Executar
 
-## Running unit tests
+1. Clone o repositório para o seu computador.
+2. Instale as dependências: `npm install`.
+3. Execute a aplicação: `ng serve`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Uso do Formulário
 
-## Running end-to-end tests
+1. Acesse a rota `http://localhost:4200`.
+2. Preencha os campos do formulário com seus dados.
+3. Clique no botão "Concluir".
+4. Acesse a rota `http://localhost:4200/user` para visualizar os dados armazenados.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Observações
 
-## Further help
+* As máscaras de entrada foram configuradas para os padrões brasileiros.
+* A validação de dados é básica e pode ser expandida de acordo com suas necessidades.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Licença
+
+Este projeto está licenciado sob a licença MIT.
